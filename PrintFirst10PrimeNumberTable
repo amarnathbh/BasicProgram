@@ -8,14 +8,12 @@ int main()
 
 {
 
-    int num[]={2,3,5,7,9,11,13,17,19,23,29};
+    int num[]={2,3,5,7,11,13,17,19,23,29};
     int b,d;
     d=0;
     
  b= sizeof(num)/sizeof(num[0]);
 cout<<b;
-
-cout<<"Enter Number To Find Multiplication table ";
 
     for (int j=0;j<b;j++)
     {
