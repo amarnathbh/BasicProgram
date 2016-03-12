@@ -28,7 +28,6 @@ cout<<"Enter Number To Find Multiplication table ";
 
         } d++;
     }
-
   return 0;
 
 }
