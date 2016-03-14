@@ -1,0 +1,73 @@
+// )(n2)bubble sort
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int list[]={10,1,5,2,8,7},i,j,a;
+    int size =sizeof(list)/sizeof(list[0]);
+//First comes bubble-sort, the most brute-force sorting method.
+//Bubble-sort is a simple sorting algorithm that repeatedly steps 
+//through the list to be sorted, compares each pair of adjacent items 
+//and swaps them if they are in the wrong order
+int temp;
+    for(int i=0; i<size; i++)
+    {
+        for(int j=size-1; j>i; j--)
+        {
+            if(list[j]<list[j-1])
+            {
+                temp=list[j-1];
+                list[j-1]=list[j];
+                list[j]=temp;
+            }
+        }
+    }
+
+for(a=0;a<size;a++)
+{
+    cout<<list[a]<<" ";
+    }
+}
+
+BIG O(n)
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int arr[]={10,1,5,2,8,7},i,a;
+    int n =sizeof(arr)/sizeof(arr[0]);
+
+bool swapped = true;
+int j = 0;
+int tmp;
+while (swapped) {
+
+    swapped = false;
+
+        j++;
+
+    for (int i = 0; i < n - j; i++) {
+
+         if (arr[i] > arr[i + 1]) {
+
+             tmp = arr[i];
+
+                arr[i] = arr[i + 1];
+
+                arr[i + 1] = tmp;
+
+                 swapped = true;
+
+            }
+
+        }
+
+    }
+for(a=0;a<n;a++)
+{
+    cout<<arr[a]<<" ";
+    }
+}
+
