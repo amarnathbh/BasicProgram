@@ -1,0 +1,53 @@
+void merge(int m, int n, int A[], int B[], int C[]) {
+
+      int i, j, k;
+
+      i = 0;
+
+      j = 0;
+
+      k = 0;
+
+      while (i < m && j < n) {
+
+            if (A[i] <= B[j]) {
+
+                  C[k] = A[i];
+
+                  i++;
+
+            } else {
+
+                  C[k] = B[j];
+
+                  j++;
+
+            }
+
+            k++;
+
+      }
+
+      if (i < m) {
+
+            for (int p = i; p < m; p++) {
+
+                  C[k] = A[p];
+
+                  k++;
+
+            }
+
+      } else {
+
+            for (int p = j; p < n; p++) {
+
+                  C[k] = B[p];
+
+                  k++;
+
+            }
+
+      }
+
+}
