@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x[10],i;
+    cout<< 'enter the data in to array';
+    for (i=0;i<10;i++){
+        cin>>x[i];
+    }
+    cin.get();
+ for (i=0;i<10;i++){
+     cout<<x[i]<<'\n';
+ }
+}
