@@ -1,40 +1,29 @@
-#include <stdio.h>
 #include<iostream>
-
 using namespace std;
-int main()
-{
-int a[]={1,8,10}, b[]={2,5,9};
-    int ans[6];
-    int i = 0, j = 0, k = 0;
-    while (i < 3 && j < 3)
+
+int main(){
+    int a[]={1,8,10}, b[]={2,5,9};
+  int answer[6];
+    int i = 0, j = 0, k = 0,c;
+
+    while (i < sizeof(a)/sizeof(a[0]) && j < sizeof(b)/sizeof(b[0]))
     {
-        if (a[i] < b[j])
-        {
-            ans[k] = a[i];
-            i++;
-        }
-        else
-        {
-            ans[k] = b[j];
-            j++;
-        }
-        k++;
+        if (a[i] < b[j])       
+            answer[k++] = a[i++];
+
+        else        
+            answer[k++] = b[j++];               
     }
 
-    while (i < 3)
-    {
-        ans[k] = a[i];
-        i++;
-        k++;
-    }
+    while (i < sizeof(a)/sizeof(a[0]))  
+        answer[k++] = a[i++];
 
-    while (j < 3)
-    {
-        ans[k] = b[j];
-        j++;
-        k++;
-    }
-for (i=0;i<6;i++){
-    cout<< ans[i];}
+
+    while (j < sizeof(b)/sizeof(b[0]))    
+        answer[k++] = b[j++];
+    for(c=0;c<6;c++)
+        {
+
+        cout<< answer[c]<<" ";
+        }
 }
