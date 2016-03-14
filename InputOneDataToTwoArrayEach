@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x[5],i,y[5];
+    cout<< 'enter the data in to array';
+    for (i=0;i<5;i++){
+        cin>>x[i]>>y[i];
+    }
+    cin.get();
+ for (i=0;i<5;i++){
+     cout<<x[i]<<' '<<y[i]<<'\n';
+ }
+}
