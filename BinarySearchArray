@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int a[]={0,1,2,3,4,5},b,c,first,last,middle,i;
+    b=sizeof(a)/sizeof(a[0]);
+    first =0;
+    last = b;
+    middle = (last+first)/2;
+    cout<<"input the search element";
+    cin>>c;
+    if(a[middle]==c)
+    {
+        cout<<"element have been found at:"<<middle<<endl;
+        return middle;
+    }
+    else
+    {
+        for (i=0;i<b;i++)
+        {
+        if (a[middle] < c)
+        {
+            first = middle;
+            middle = (last+first)/2;
+           }
+        else
+        {
+          last =middle;
+          middle =(last+first)/2;
+        }
+        }
+    }
+    
+   cout<<"element have been found at:"<<middle+1<<endl; 
+}
