@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int a[]={1,2,3,4,21};
+    int target =21;
+    //declare low, mid, and high
+int low = 0, mid, high =sizeof(a)/sizeof(a[0]);
+cout<<high;
+
+//binary search loop
+while (low <= high)
+{
+//compute mid
+    mid = low+ (high-low) / 2;
+    if (target == a[mid]){
+    cout<<"the tagert is found at"<<mid;
+    break;}
+//check target against list[mid]
+    else if (target < a[mid]){
+//if target is below list[mid] reset high
+    high = mid - 1;
+    }
+    else{
+//if target is found set low to exit the loop 
+    low = mid + 1;
+    }
+}
+
+cout<<"target not found"; 
+
+
+}
+
